@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int x;
+int proba = 0;
+
+
+int main()
+{
+    srand( time( NULL ) );
+    int liczba;
+    liczba =( rand() % 1000 ) + 1;
+
+
+    cout << "Witaj w zgadywance. Twoim zadaniem jest jak najszybsze odgadniecie wylosowanej liczby.\nPowodzenia!\n";
+    cout << "Wprowadz liczbe: ";
+
+
+    while( liczba != x )
+    {
+        proba++;
+        cout << endl << proba << ". Proba ";
+
+        while( !( cin >> x ) )
+        {
+            proba++;
+            cout << "Wprowadz poprawna liczbe.\n" << proba << ". Proba";
+            cin.clear();
+            cin.sync();
+        }
+        if( x > liczba ) cout << "Za duza liczba, sprobuj ponownie: ";
+
+        if( x < liczba ) cout << "Za mala liczba, sprobuj ponownie: ";
+
+    }
+    cout << "Gratuluje! Udalo Ci sie odgadnac wylosowana liczbe w " << proba << " probie!";
+
+
+    return 0;
+}
