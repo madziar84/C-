@@ -1,0 +1,51 @@
+#include <iostream>
+#include <math.h>
+
+class Ksztalt
+{
+public:
+    virtual void oblicz_pole_figury()=0;
+};
+
+class Kolo:public Ksztalt
+{
+    float promien;
+public:
+    Kolo(float r)
+    {
+        promien = r;
+    }
+    virtual void oblicz_pole_figury()
+    {
+        std::cout << "Pole kola wynosi: " << M_PI*promien*promien << std::endl;
+    }
+};
+
+class Kwadrat:public Ksztalt
+{
+    float bok;
+public:
+    Kwadrat(float a)
+    {
+        bok = a;
+    }
+    virtual void oblicz_pole_figury()
+    {
+        std::cout << "Pole kwadratu wynosi: " << bok*bok << std::endl;
+    }
+};
+
+class Prostokat:public Ksztalt
+{
+    float bok_a, bok_b;
+public:
+    Prostokat(float a, float b)
+    {
+        bok_a = a;
+        bok_b = b;
+    }
+    virtual void oblicz_pole_figury()
+    {
+        std::cout << "Pole prostokata wynosi: " << bok_a*bok_b << std::endl;
+    }
+};

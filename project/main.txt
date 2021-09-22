@@ -1,0 +1,32 @@
+#include <iostream>
+#include "pola_figur.h"
+
+void obliczenia(Ksztalt *x);
+
+int main()
+{
+    /*if (czy_test_jako_argument_z_main)
+    {
+        test_me();
+        return 0;
+    }*/
+
+    Kolo k(1);
+    Kwadrat kw(2);
+    Prostokat p(1,2);
+
+    Ksztalt *wskaznik;
+
+    wskaznik = &k;
+    wskaznik -> oblicz_pole_figury();
+
+    wskaznik = &kw;
+    wskaznik -> oblicz_pole_figury();
+
+    wskaznik = &p;
+    wskaznik -> oblicz_pole_figury();
+
+    //obliczenia(wskaznik);
+
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+#include "pola_figur.h"
+
+void obliczenia(Ksztalt *x)
+{
+    x -> oblicz_pole_figury();
+}
+/*
+void test_me()
+{
+
+
+}*/
